@@ -1,11 +1,13 @@
 :root {
-  --main-font: "Inter", sans-serif;
-  --txt-cl: #11002d;
-  --white-cl: #ffffff;
-  --accent-cl: #5200d9;
-  --pink-cl: #f2eaff;
-  --black-cl: #000000;
-  --pink-bg: rgba(82, 0, 217, 0.1);
+  --blue-background: #010a20;
+  --white: #fff;
+  --text-lighten: #e0e0e0;
+  --grey-reduced: #85a3b2;
+  --light-text: rgba(21, 20, 57, 0.4);
+  --paragraph-dark: #6f7787;
+  --font-family: "DM Sans", sans-serif;
+  --second-family: "Roboto", sans-serif;
+  --third-family: "FontAwesome", sans-serif;
 }
 html {
   scroll-behavior: smooth;
