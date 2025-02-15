@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: var(--main-font);
+  font-family: var(--font-family);
   color: var(--txt-cl);
   background-color: var(--white-cl);
   line-height: 1.62;
@@ -193,7 +193,7 @@ a {
     width: 100vw;
     height: 100vh;
     padding: 32px;
-    background-color: var(--accent-cl);
+    background-color: var(--paragraph-dark);
     opacity: 0.95;
     z-index: 999;
     display: flex;
@@ -269,7 +269,7 @@ a {
   }
   /* ---------------------- HERO ------------------------- */
   .hero {
-    background-image: url(../img/bg_img_main.jpg);
+    background-image: url(../img/hero_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

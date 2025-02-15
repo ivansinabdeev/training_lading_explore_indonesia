@@ -11,10 +11,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
@@ -26,91 +38,369 @@
         <a class="header-logo" href="./index.html"
           ><span class="header-logo-svg">
             <svg class="logo-icon">
-              <use href="./img/icons.svg#icon-check"></use>
-            </svg>
-            trip</span
-          >страхование</a
+              <use href="./img/icons.svg#icon-logo"></use>
+            </svg> </span
+          >Explore Indonesia</a
         >
-        <button class="mob-btn-open js-open-menu" type="button">
-          <svg width="32" height="32">
-            <use href="./img/icons.svg#icon-btn-mob"></use>
-          </svg>
-        </button>
+
         <ul class="header-list">
           <li class="header-item">
-            <a class="header-link" href="#benefits">Продукты</a>
+            <a class="header-link" href="#destinations">destinations</a>
           </li>
           <li class="header-item">
-            <a class="header-link" href="#reviews">Отзывы</a>
+            <a class="header-link" href="#experiences">experiences</a>
           </li>
           <li class="header-item">
-            <a class="header-link" href="#footer">Партнерам</a>
+            <a class="header-link" href="#about">about</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="#gallery">gallery</a>
           </li>
         </ul>
-        <button class="header-btn" type="button">
-          <svg class="header-btn-icon" width="20" height="20">
-            <use href="./img/icons.svg#icon-mail"></use>
-          </svg>
-          Скидки
-        </button>
+        <div class="header-wrap-btn">
+          <button class="header-btn" type="button">
+            <svg class="header-btn-icon" width="20" height="20">
+              <use href="./img/icons.svg#icon-search"></use>
+            </svg>
+          </button>
+          <button class="mob-btn-open js-open-menu" type="button">
+            <svg width="32" height="32">
+              <use href="./img/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
         <div class="mob-menu js-menu-container">
           <button class="mob-btn-close js-close-menu" type="button">
             <svg width="10" height="10">
               <use href="./img/icon-close.svg#icon-close-black"></use>
             </svg>
           </button>
-          <ul class="mob-list">
-            <li class="mob-item">
-              <a class="mob-link mobile-modal-link" href="#benefits"
-                >Продукты</a
-              >
+          <ul class="mob-menu-list">
+            <li class="header-item">
+              <a class="header-link" href="#destinations">destinations</a>
             </li>
-            <li class="mob-item">
-              <a class="mob-link mobile-modal-link" href="#reviews">Отзывы</a>
+            <li class="header-item">
+              <a class="header-link" href="#experiences">experiences</a>
             </li>
-            <li class="mob-item">
-              <a class="mob-link mobile-modal-link" href="#footer">Партнерам</a>
+            <li class="header-item">
+              <a class="header-link" href="#about">about</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#gallery">gallery</a>
             </li>
           </ul>
-          <button class="mob-btn" type="button">
-            <svg class="header-btn-icon" width="20" height="20">
-              <use href="./img/icons.svg#icon-mail"></use>
-            </svg>
-            Скидки
-          </button>
         </div>
       </div>
     </header>
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
-          <h1 class="hero-title">Страхование путешественников</h1>
-
-          <button class="hero-btn" type="submit">Узнать стоимость</button>
+          <div class="hero-title-wrap">
+            <h1 class="hero-title">explore indonesia</h1>
+            <button class="hero-btn" type="submit">Start travelling</button>
+          </div>
+          <div class="hero-descr">
+            <div class="hero-lang">
+              <ul class="hero-lang-list">
+                <li class="hero-lang-item">
+                  <p class="hero-lang-text">Tw</p>
+                </li>
+                <li class="hero-lang-item">
+                  <p class="hero-lang-text">In</p>
+                </li>
+                <li class="hero-lang-item">
+                  <p class="hero-lang-text">Fb</p>
+                </li>
+              </ul>
+            </div>
+            <ul class="hero-descr-list">
+              <li class="hero-descr-item">
+                <span class="hero-descr-num">01</span>
+                <h2 class="hero-descr-title">Title here</h2>
+                <p class="hero-descr-text">
+                  Lorem ipsum dolor sit amet et amet ist ame.
+                </p>
+              </li>
+              <li class="hero-descr-item">
+                <span class="hero-descr-num">02</span>
+                <h2 class="hero-descr-title">Title here</h2>
+                <p class="hero-descr-text">
+                  Lorem ipsum dolor sit amet et amet ist ame.
+                </p>
+              </li>
+              <li class="hero-descr-item">
+                <span class="hero-descr-num">03</span>
+                <h2 class="hero-descr-title">Title here</h2>
+                <p class="hero-descr-text">
+                  Lorem ipsum dolor sit amet et amet ist ame.
+                </p>
+              </li>
+            </ul>
+            <div class="hero-descr-video"></div>
+          </div>
         </div>
-      </section> -->
-      <!-- <section class="benefits" id="benefits">
-        <div class="container"></div>
-      </section> -->
-      <!-- <section class="policy">
+      </section>
+      <section class="benefits" id="benefits">
         <div class="container">
-          
+          <div class="benefits-item">
+            <img src="./img/benefits/img_1.png" alt="walks" />
+            <div class="benefits-wrap">
+              <h2 class="section-subtitle benefits-title">
+                The walkways of Indonesia spellbind
+              </h2>
+              <p class="benefits-descr">
+                Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce
+                commodo magna et libero mollis rhoncus.
+              </p>
+              <button class="benefits-btn" type="button">Learn More</button>
+            </div>
+          </div>
+          <div class="benefits-item">
+            <img src="./img/benefits/img_2.png" alt="beach" />
+            <div class="benefits-wrap">
+              <h2 class="section-subtitle benefits-title">
+                Perfect beaches exude relaxation and fun
+              </h2>
+              <p class="benefits-descr">
+                Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce
+                commodo magna et libero mollis rhoncus.
+              </p>
+              <button class="benefits-btn" type="button">Learn More</button>
+            </div>
+          </div>
         </div>
-      </section> -->
-      <!-- <section class="line">
-        <div class="container"></div>
-      </section> -->
-      <!-- <section class="reviews" id="reviews">
+      </section>
+      <section class="secrets">
         <div class="container">
-          
+          <h2 class="section-title secrets-title">Explore Our Secrets</h2>
+          <ul class="secrets-list">
+            <li class="secrets-item">
+              <img src="./img/secrets/secrets_1.png" alt="secrets view" />
+            </li>
+            <li class="secrets-item">
+              <img src="./img/secrets/secrets_2.png" alt="secrets view" />
+            </li>
+            <li class="secrets-item">
+              <img src="./img/secrets/secrets_3.png" alt="secrets view" />
+            </li>
+          </ul>
         </div>
-      </section> -->
+      </section>
+      <section class="numbers">
+        <div class="container">
+          <h2 class="section-title numbers-title">By The Numbers</h2>
+          <p class="numbers-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+            commodo magna et libero.Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit.
+          </p>
+          <ul class="numbers-list">
+            <li class="numbers-item">
+              <h3 class="numbers-num">100+</h3>
+              <p class="numbers-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                commodo magna et libero.
+              </p>
+            </li>
+            <li class="numbers-item">
+              <h3 class="numbers-num">43,000+</h3>
+              <p class="numbers-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                commodo.
+              </p>
+            </li>
+            <li class="numbers-item">
+              <h3 class="numbers-num">30+</h3>
+              <p class="numbers-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                commodo magna et libero.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="views">
+        <div class="container">
+          <h2 class="section-subtitle views-title">
+            Our hills and valleys are like nothing you’ve seen.
+          </h2>
+          <p class="views-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit
+            amet magna commodo, tempus dolor sit amet, laoreet elit. Donec
+            mauris tortor.
+          </p>
+          <button class="views-btn" type="button">Learn More</button>
+        </div>
+      </section>
+      <section class="videos">
+        <div class="container">
+          <h2 class="section-subtitle videos-title">
+            Live a life like you wouldn’t imagine, experience a life you
+            wouldn’t expect.
+          </h2>
+          <div class="videos-main"></div>
+          <div class="videos-second">
+            <div class="videos-second-item">
+              <h3 class="videos-subtitle">In The Country</h3>
+              <p class="videos-descr">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus dapibus mauris in lectus tempus.
+              </p>
+            </div>
+            <div class="videos-second-item">
+              <h3 class="videos-subtitle">In The City</h3>
+              <p class="videos-descr">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus dapibus mauris in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="container">
+          <h2 class="section-title gallery-title">Photo Gallery</h2>
+          <p class="gallery-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            dapibus mauris in lectus tempus, eget tincidunt.
+          </p>
+          <ul class="gallery-list">
+            <li class="gallery-item">
+              <img
+                src="./img/gallery/gallery-1.png"
+                alt="gallery image"
+                class="gallery-img"
+              />
+            </li>
+            <li class="gallery-item">
+              <img
+                src="./img/gallery/gallery-2.png"
+                alt="gallery image"
+                class="gallery-img"
+              />
+            </li>
+            <li class="gallery-item">
+              <img
+                src="./img/gallery/gallery-3.png"
+                alt="gallery image"
+                class="gallery-img"
+              />
+            </li>
+            <li class="gallery-item">
+              <img
+                src="./img/gallery/gallery-4.png"
+                alt="gallery image"
+                class="gallery-img"
+              />
+            </li>
+            <li class="gallery-item">
+              <img
+                src="./img/gallery/gallery-5.png"
+                alt="gallery image"
+                class="gallery-img"
+              />
+            </li>
+            <li class="gallery-item">
+              <img
+                src="./img/gallery/gallery-6.png"
+                alt="gallery image"
+                class="gallery-img"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="getting">
+        <div class="container">
+          <h2 class="section-title geting-title">Getting there</h2>
+          <div class="getting-list">
+            <div class="getting-item">
+              <span>1</span>
+              <h3 class="getting-subtitle">Bookings your flights</h3>
+              <p class="getting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus
+                varius. Sed euismod orci dictum faucibus malesuada. Praesent sed
+                eros tincidunt, viverra neque auctor, lobortis enim.
+              </p>
+            </div>
+            <div class="getting-item">
+              <span>2</span>
+              <h3 class="getting-subtitle">Choosing your hotel</h3>
+              <p class="getting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus
+                varius. Sed euismod orci dictum faucibus malesuada. Praesent sed
+                eros tincidunt, viverra neque auctor, lobortis enim.
+              </p>
+            </div>
+            <div class="getting-item">
+              <img src="./img/getting_img.png" alt="travelling with bike" />
+              <h3 class="getting-subtitle">Travelling there</h3>
+              <p class="getting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus dapibus mauris in lectus tempus, eget tincidunt.
+              </p>
+            </div>
+            <div class="getting-item">
+              <span>3</span>
+              <h3 class="getting-subtitle">Planning your experiences</h3>
+              <p class="getting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus
+                varius.
+              </p>
+              <button class="views-btn" type="button">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <!-- <footer class="footer" id="footer">
+    <footer class="footer" id="footer">
       <div class="container">
-       
+        <a class="header-logo" href="./index.html"
+          ><span class="header-logo-svg">
+            <svg class="logo-icon">
+              <use href="./img/icons.svg#icon-logo"></use>
+            </svg> </span
+          >Explore Indonesia</a
+        >
+        <ul class="footer-list">
+          <li class="footer-item"><a href="" class="footer-link">About</a></li>
+          <li class="footer-item">
+            <a href="" class="footer-link">Pricing</a>
+          </li>
+          <li class="footer-item">
+            <a href="" class="footer-link">Company</a>
+          </li>
+          <li class="footer-item"><a href="" class="footer-link">Blog</a></li>
+        </ul>
+        <ul class="footer-socials">
+          <li class="footer-social">
+            <a href="" class="footer-icon">
+              <svg width="24" height="24">
+                <use href="./img/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social">
+            <a href="" class="footer-icon">
+              <svg width="24" height="24">
+                <use href="./img/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social">
+            <a href="" class="footer-icon">
+              <svg width="24" height="24">
+                <use href="./img/icons.svg#icon-google"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="footer-copyright">Copyright © 2019</p>
       </div>
-    </footer> -->
+    </footer>
 
     <script type="module" src="./js/mob-menu.js"></script>
     <script type="module" src="./js/backToTop.js"></script>
