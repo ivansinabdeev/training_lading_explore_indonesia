@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traveling policy</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Back to top button -->
+    <a id="backToTop"></a>
+    <header class="header">
+      <div class="container">
+        <a class="header-logo" href="./index.html"
+          ><span class="header-logo-svg">
+            <svg class="logo-icon">
+              <use href="./img/icons.svg#icon-check"></use>
+            </svg>
+            trip</span
+          >страхование</a
+        >
+        <button class="mob-btn-open js-open-menu" type="button">
+          <svg width="32" height="32">
+            <use href="./img/icons.svg#icon-btn-mob"></use>
+          </svg>
+        </button>
+        <ul class="header-list">
+          <li class="header-item">
+            <a class="header-link" href="#benefits">Продукты</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="#footer">Партнерам</a>
+          </li>
+        </ul>
+        <button class="header-btn" type="button">
+          <svg class="header-btn-icon" width="20" height="20">
+            <use href="./img/icons.svg#icon-mail"></use>
+          </svg>
+          Скидки
+        </button>
+        <div class="mob-menu js-menu-container">
+          <button class="mob-btn-close js-close-menu" type="button">
+            <svg width="10" height="10">
+              <use href="./img/icon-close.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <ul class="mob-list">
+            <li class="mob-item">
+              <a class="mob-link mobile-modal-link" href="#benefits"
+                >Продукты</a
+              >
+            </li>
+            <li class="mob-item">
+              <a class="mob-link mobile-modal-link" href="#reviews">Отзывы</a>
+            </li>
+            <li class="mob-item">
+              <a class="mob-link mobile-modal-link" href="#footer">Партнерам</a>
+            </li>
+          </ul>
+          <button class="mob-btn" type="button">
+            <svg class="header-btn-icon" width="20" height="20">
+              <use href="./img/icons.svg#icon-mail"></use>
+            </svg>
+            Скидки
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">Страхование путешественников</h1>
+          <p class="hero-subtitle">Полис, который действительно работает</p>
+          <form class="hero-form">
+            <div class="hero-form-wrap">
+              <label class="hero-form-search"
+                ><input
+                  type="text"
+                  class="hero-form-input"
+                  placeholder="Куда едем?"
+              /></label>
+              <div class="hero-input-wrap">
+                <label class="hero-form-start">
+                  <input
+                    type="date"
+                    name="start"
+                    value="2025-03-05"
+                    class="hero-form-date"
+                /></label>
+                <label class="hero-form-end">
+                  <input
+                    type="date"
+                    name="end"
+                    value="2025-03-06"
+                    class="hero-form-date"
+                /></label>
+              </div>
+              <label for="dropdown" class="hero-form-choise">
+                <select
+                  id="dropdown"
+                  name="quantity_mans"
+                  class="hero-form-choise-list"
+                >
+                  <option value="1_man">1 человек</option>
+                  <option value="2_man">2 человека</option>
+                  <option value="3_man">3 человека</option>
+                  <option value="4_man">4 человека</option>
+                  <option value="5_man">5 человек</option>
+                </select>
+              </label>
+            </div>
+            <button class="hero-btn" type="submit">Узнать стоимость</button>
+          </form>
+        </div>
+      </section>
+      <section class="benefits" id="benefits">
+        <div class="container">
+          <h2 class="visually-hidden">Benefits</h2>
+          <ul class="benefits-list">
+            <li class="benefits-item">
+              <div class="benefits-descr-wrap">
+                <h3 class="benefits-title">Покрываем коронавирус</h3>
+                <p class="benefits-text">
+                  Все наши полисы покрывают лечение и диагностику в случае
+                  заражения COVID-19, ведь не все страны готовы лечить
+                  коронавирус за свой счет. Максимальное покрытие по медицинским
+                  расходам составит
+                  <span class="open-text"
+                    ><br class="open-text" />Читать далее</span
+                  >
+                  <span class="hidden-text-mob"
+                    >100 000 USD/EUR. Также полисом предусмотрена компенсация по
+                    риску отмена поездки, если застрахованный заболеет
+                    COVID-19.</span
+                  >
+                </p>
+              </div>
+              <img
+                src="./img/benefits/Online-Doctor-rafiki.png"
+                alt="doctor_in_image"
+                class="benefits-img"
+              />
+            </li>
+            <li class="benefits-item">
+              <div class="benefits-descr-wrap">
+                <h3 class="benefits-title">
+                  Помощь при обострении хронических заболеваний
+                </h3>
+                <p class="benefits-text">
+                  Сейчас даже у людей моложе 30 лет есть хронические
+                  заболевания, которые время от времени дают о себе знать. Не
+                  говоря уже о пожилых людях - для них помощь при
+                  <span class="open-text"
+                    ><br class="open-text" />Читать далее</span
+                  >
+                  <span class="hidden-text-mob">
+                    обострении хронических заболеваний особенно важна. Поэтому
+                    мы предлагаем одно из самых больших покрытий на рынке по
+                    купированию обострений хронических заболеваний – до 3
+                    000$.</span
+                  >
+                </p>
+              </div>
+              <img
+                src="./img/benefits/Medicine-amico.png"
+                alt="farms_in_image"
+                class="benefits-img"
+              />
+            </li>
+            <li class="benefits-item">
+              <div class="benefits-descr-wrap">
+                <h3 class="benefits-title">Доктор онлайн 24/7</h3>
+                <p class="benefits-text">
+                  Чтобы не тратить время на дорогу до клиники и ожидание врача,
+                  наши клиенты могут бесплатно получить онлайн-консультацию
+                  терапевта или педиатра в приложении на смартфоне. Эта опция
+                  включена во все
+                  <span class="open-text">
+                    <br class="open-text" />Читать далее</span
+                  >
+                  <span class="hidden-text-mob"
+                    >страховки независимо от тарифа. Врач отвечает сразу же 24/7
+                    в видео- или онлайн-чате. Нужно лишь установить наше
+                    приложение.</span
+                  >
+                </p>
+              </div>
+              <img
+                src="./img/benefits/Doctors-pana.png"
+                alt="doctors_in_image"
+                class="benefits-img benefits-img-lg"
+              />
+            </li>
+            <li class="benefits-item">
+              <div class="benefits-descr-wrap">
+                <h3 class="benefits-title">Только проверенные клиники</h3>
+                <p class="benefits-text">
+                  Мы контролируем качество работы медицинских учреждений с
+                  помощью Ваших рейтингов и отзывов на нашем сайте. Если мы
+                  получаем более 2-х негативных отзывов по клинике, то просто
+                  перестаем с ней работать.
+                  <span class="open-text">
+                    <br class="open-text" />Читать далее</span
+                  >
+                  <span class="hidden-text-mob"
+                    >Таким образом, наших клиентов направляют только в
+                    проверенные клиники, где быстро оказывают квалифицированную
+                    медицинскую помощь.
+                  </span>
+                </p>
+              </div>
+              <img
+                src="./img/benefits/Person-with-medical-mask-pana.png"
+                alt="women_good_mood"
+                class="benefits-img"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="policy">
+        <div class="container">
+          <h2 class="policy-title">Как купить полис?</h2>
+          <ul class="policy-list">
+            <li class="policy-item">
+              <span class="policy-number">1</span>
+              <svg class="policy-icon">
+                <use href="./img/icons-police.svg#icon-calc"></use>
+              </svg>
+              <p class="policy-descr">Рассчитайте онлайн стоимость полиса</p>
+            </li>
+            <li class="policy-item">
+              <span class="policy-number">2</span>
+              <svg class="policy-icon">
+                <use href="./img/icons-police.svg#icon-form"></use>
+              </svg>
+              <p class="policy-descr">Введите данные о вашей поездке</p>
+            </li>
+            <li class="policy-item">
+              <span class="policy-number">3</span>
+              <svg class="policy-icon">
+                <use href="./img/icons-police.svg#icon-wallet"></use>
+              </svg>
+              <p class="policy-descr">Оплатите полис через интернет</p>
+            </li>
+            <li class="policy-item">
+              <span class="policy-number">4</span>
+              <svg class="policy-icon">
+                <use href="./img/icons-police.svg#icon-print"></use>
+              </svg>
+              <p class="policy-descr">
+                Получите полис на e-mail и распечатайте
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="line">
+        <div class="line-wrap">
+          <div class="line-list">
+            <span class="line-text"
+              ><p>Великобритания</p>
+              <p>Германия</p>
+              <p>Франция</p>
+              <p>Чехия</p>
+              <p>Дания</p>
+              <p>Финляндия</p>
+            </span>
+            <span class="line-text"
+              >Великобритания Германия Франция Чехия Дания Финляндия</span
+            >
+          </div>
+        </div>
+        <div class="line-wrap">
+          <div class="line-list second">
+            <span class="line-text"
+              ><p>Великобритания</p>
+              <p>Германия</p>
+              <p>Франция</p>
+              <p>Чехия</p>
+              <p>Дания</p>
+              <p>Финляндия</p>
+            </span>
+            <span class="line-text"
+              >Великобритания Германия Франция Чехия Дания Финляндия</span
+            >
+          </div>
+        </div>
+      </section>
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <h2 class="reviews-title">Отзывы</h2>
+          <div class="swiper">
+            <ul class="reviews-list swiper-wrapper">
+              <li class="reviews-item swiper-slide">
+                <div class="reviews-stars">
+                  <ul class="reviews-icons">
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="reviews-date">05/02/2023</p>
+                </div>
+                <p class="reviews-text">
+                  Много лет пользуюсь предпочитаю другим компаниям! Оперативный
+                  чат, посмотрим как будет дальше! Пока все отлично)
+                </p>
+                <div class="reviews-user">
+                  <img src="./img/vasia.png" alt="user face" />
+                  <p class="reviews-name">Василий Петров</p>
+                </div>
+              </li>
+              <li class="reviews-item swiper-slide">
+                <div class="reviews-stars">
+                  <ul class="reviews-icons">
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="reviews-date">05/02/2023</p>
+                </div>
+                <p class="reviews-text">
+                  Много лет пользуюсь предпочитаю другим компаниям! Оперативный
+                  чат, посмотрим как будет дальше! Пока все отлично)
+                </p>
+                <div class="reviews-user">
+                  <img src="./img/vasia.png" alt="user face" />
+                  <p class="reviews-name">Василий Петров</p>
+                </div>
+              </li>
+              <li class="reviews-item swiper-slide">
+                <div class="reviews-stars">
+                  <ul class="reviews-icons">
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="reviews-date">05/02/2023</p>
+                </div>
+                <p class="reviews-text">
+                  Много лет пользуюсь предпочитаю другим компаниям! Оперативный
+                  чат, посмотрим как будет дальше! Пока все отлично)
+                </p>
+                <div class="reviews-user">
+                  <img src="./img/vasia.png" alt="user face" />
+                  <p class="reviews-name">Василий Петров</p>
+                </div>
+              </li>
+              <li class="reviews-item swiper-slide">
+                <div class="reviews-stars">
+                  <ul class="reviews-icons">
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="reviews-icon">
+                      <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="reviews-date">05/02/2023</p>
+                </div>
+                <p class="reviews-text">
+                  Много лет пользуюсь предпочитаю другим компаниям! Оперативный
+                  чат, посмотрим как будет дальше! Пока все отлично)
+                </p>
+                <div class="reviews-user">
+                  <img src="./img/vasia.png" alt="user face" />
+                  <p class="reviews-name">Василий Петров</p>
+                </div>
+              </li>
+            </ul>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-info">
+          <p class="footer-title">Информационный центр</p>
+          <ul>
+            <li class="footer-item">
+              <a class="footer-link" href="">О нас</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="">Отзывы</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="">Партнерам</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-products">
+          <p class="footer-title">Продукты</p>
+          <ul>
+            <li class="footer-item">
+              <a class="footer-link" href="">Страховка для Шенгена</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="">Страховка для Украины</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="">Страховка в страны</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="">Горнолыжная страховка</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="">Годовая страховка</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-docs">
+          <p class="footer-title">Документы</p>
+          <ul>
+            <li class="footer-item">
+              <a class="footer-link" href="">Пользовательское соглашение</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="">Политика обработки данных</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href=""
+                >Политика информационной безопасности
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-mob">
+          <label for="info-centre" class="footer-mob-label">
+            <select
+              id="info-centre"
+              name="info-centre"
+              class="footer-mob-list footer-title"
+            >
+              <option value="link-1">Информационный центр</option>
+              <option value="link-2">О нас</option>
+              <option value="link-3">Отзывы</option>
+              <option value="link-4">Партнерам</option>
+            </select>
+          </label>
+          <label for="products" class="footer-mob-label">
+            <select
+              id="products"
+              name="products"
+              class="footer-mob-list footer-title"
+            >
+              <option value="link-1">Продукты</option>
+              <option value="link-2">Страховка для Шенгена</option>
+              <option value="link-3">Страховка для Украины</option>
+              <option value="link-4">Страховка в страны</option>
+              <option value="link-5">Горнолыжная страховка</option>
+              <option value="link-6">Годовая страховка</option>
+            </select>
+          </label>
+          <label for="documents" class="footer-mob-label">
+            <select
+              id="documents"
+              name="documents"
+              class="footer-mob-list footer-title"
+            >
+              <option value="link-1">Документы</option>
+              <option value="link-2">Пользовательское соглашение</option>
+              <option value="link-3">Политика обработки данных</option>
+              <option value="link-4">
+                Политика информационной безопасности
+              </option>
+            </select>
+          </label>
+        </div>
+        <div class="footer-social">
+          <p class="footer-title">Связаться с нами</p>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <img
+                  class="footer-social-icon"
+                  src="./img/footer/youtube.png"
+                  alt="social-link-youtube"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <img
+                  class="footer-social-icon"
+                  src="./img/footer/vk.png"
+                  alt="social-link-vk"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <img
+                  class="footer-social-icon"
+                  src="./img/footer/facebook.png"
+                  alt="social-link-facebook"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <img
+                  class="footer-social-icon"
+                  src="./img/footer/twitter.png"
+                  alt="social-link-twitter.png"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <img
+                  class="footer-social-icon"
+                  src="./img/footer/tiktok.png"
+                  alt="social-link-tiktok.png"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <img
+                  class="footer-social-icon"
+                  src="./img/footer/instagram.png"
+                  alt="social-link-instagram"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <img
+                  class="footer-social-icon"
+                  src="./img/footer/telegram.png"
+                  alt="social-link-telegram"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <img
+                  class="footer-social-icon"
+                  src="./img/footer/whatsapp.png"
+                  alt="social-link-whatsapp.png"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/mob-menu.js"></script>
+    <script type="module" src="./js/backToTop.js"></script>
+    <script type="module" src="./js/swiper.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
