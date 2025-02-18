@@ -291,12 +291,9 @@ a {
     font-weight: 400;
     font-size: 14px;
     line-height: 0.9;
-    color: var(--white-cl);
+    color: var(--white);
     transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1),
       border-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .header-btn-icon {
-    fill: currentColor;
   }
 
   .header-list {
@@ -335,11 +332,12 @@ a {
       font-size: 50px;
     }
   }
-
+  .hero-title-wrap {
+    margin-bottom: 54px;
+  }
   .hero-btn {
     color: var(--light-white);
     padding: 16px 40px;
-    margin-bottom: 54px;
   }
   .hero-descr {
   }
@@ -377,6 +375,7 @@ a {
     line-height: 150%;
     letter-spacing: 0.03em;
     color: var(--grey);
+    max-width: 210px;
   }
   .hero-descr-video {
   }
@@ -654,6 +653,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
   }
   .header .container {
     display: flex;
@@ -818,7 +818,11 @@ a {
     max-width: 100%;
     height: 945px;
     padding-top: 153px;
-    padding-bottom: 40px;
+  }
+  @media screen and (max-width: 1169) {
+    .hero {
+      padding-bottom: 40px;
+    }
   }
 
   .hero-title {
@@ -832,24 +836,33 @@ a {
 
     margin-bottom: 8px;
   }
+  @media screen and (max-width: 1169px) {
+    .hero-title-wrap {
+      margin-bottom: 54px;
+    }
+  }
 
   .hero-btn {
     color: var(--light-white);
     max-width: 217px;
     padding: 15px 40px;
-    margin-bottom: 54px;
   }
-  .hero-descr {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+  @media screen and (max-width: 1169px) {
+    .hero-descr {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
   }
   .hero-lang {
-    grid-column-start: 1;
-    grid-row-start: 2;
-
     display: flex;
     align-items: center;
+  }
+  @media screen and (max-width: 1169px) {
+    .hero-lang {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
   }
   .hero-lang-list {
     display: flex;
@@ -872,12 +885,15 @@ a {
     border: 1px solid var(--black);
     background-color: var(--black-trans);
 
-    grid-column: span 3 / span 3;
-    grid-column-start: 1;
-    grid-row-start: 1;
-
     padding: 25px 0;
     padding-left: 25px;
+  }
+  @media screen and (max-width: 1169px) {
+    .hero-descr-list {
+      grid-column: span 3 / span 3;
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
   }
 
   .hero-descr-num {
@@ -903,10 +919,12 @@ a {
     color: var(--grey);
     max-width: 210px;
   }
-  .hero-descr-video {
-    grid-column: span 2 / span 2;
-    grid-row-start: 2;
-    margin-left: auto;
+  @media screen and (max-width: 1169px) {
+    .hero-descr-video {
+      grid-column: span 2 / span 2;
+      grid-row-start: 2;
+      margin-left: auto;
+    }
   }
 
   /* ------------------------ BENEFITS ------------------------------ */
@@ -967,8 +985,6 @@ a {
 
   .policy {
     padding: 44px 0;
-  }
-  .container {
   }
   .policy-title {
     font-weight: 600;
@@ -1213,17 +1229,18 @@ a {
 
 /* ==============================------------ DESKTOP ----------================================== */
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1170px) {
   .header {
     padding: 30px 0;
   }
   .header .container {
     max-width: 1500px;
+    position: relative;
   }
   .header-logo {
-    position: relative;
+    position: absolute;
     font-size: 23px;
-    right: 64px;
+    left: -200px;
   }
   .header-list {
     margin-right: auto;
@@ -1232,49 +1249,76 @@ a {
     font-size: 18px;
   }
 
-  /* ----------------------------- HERO -------------------------------- */
+  /* ---------------------- HERO ------------------------- */
   .hero {
     height: 1080px;
-    padding-top: 316px;
-    padding-bottom: 436px;
+    padding-top: 266px;
+    overflow: hidden;
   }
+  .hero .container {
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+  }
+
   .hero-title {
-    font-size: 40px;
-  }
-  .hero-subtitle {
-    font-size: 24px;
-    margin-bottom: 43px;
-  }
-  .hero-form-wrap {
-    gap: 40px;
-    justify-content: center;
-    padding: 17px 40px;
-    margin-bottom: 40px;
-  }
-  .hero-form-search::after,
-  .hero-input-wrap::after,
-  .hero-form-start::after {
-    height: 48px;
+    font-size: 120px;
+
+    margin-bottom: 21px;
   }
 
-  .hero-form-date,
-  .hero-form-choise-list,
-  .hero-form-input::placeholder {
-    font-size: 18px;
-  }
-  .hero-form-end {
-    padding-left: 40px;
-  }
-
-  .hero-form-date::-webkit-calendar-picker-indicator {
-    background-size: 26px 26px;
-  }
   .hero-btn {
-    padding: 24px 32px;
-    min-width: 232px;
+    font-size: 20px;
+    max-width: 272px;
+  }
+  .hero-descr {
+    display: flex;
+    margin-top: auto;
+  }
+  .hero-lang {
+    position: absolute;
+    left: -150px;
+    bottom: 110px;
+  }
 
-    font-weight: 800;
-    font-size: 18px;
+  .hero-descr-list {
+    padding: 44px 0;
+    padding-left: 0px;
+    width: 1225px;
+  }
+
+  .hero-descr-num {
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--main-red);
+    margin-bottom: 4px;
+  }
+  .hero-descr-title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.56;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .hero-descr-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--grey);
+    max-width: 210px;
+  }
+  .hero-descr-video {
+    position: absolute;
+    bottom: 0;
+    right: -170px;
+  }
+  .hero-descr-video img {
+    max-width: 417px;
   }
   /* ------------------------ BENEFITS ------------------------------ */
   .benefits {
