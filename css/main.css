@@ -137,6 +137,19 @@ a {
     line-height: 1.19048;
   }
 }
+.section-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--blue-background);
+}
+@media screen and (min-width: 1170px) {
+  .section-title {
+    font-size: 50px;
+    line-height: 1.5;
+  }
+}
 
 /* ------------------- BACK TO TOP BTN ---------------------- */
 #backToTop {
@@ -180,10 +193,10 @@ a {
 
 .swiper-pagination-bullet {
   background-color: transparent;
-  border: 1px solid var(--accent-cl);
+  border: 1px solid var(--main-red);
 }
 .swiper-pagination-bullet-active {
-  background-color: var(--accent-cl);
+  background-color: var(--main-red);
 }
 
 /* --------------------- SLIDER SWIPER -------------------------------------- */
@@ -433,191 +446,44 @@ a {
     margin-bottom: 33px;
   }
 
-  /* -------------------------- POLICY ------------------------- */
+  /* -------------------------- SECRETS ------------------------- */
 
-  .policy {
-    padding: 32px 0;
-  }
-  .container {
-  }
-  .policy-title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 0.91;
-    color: var(--txt-cl);
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .policy-list {
-  }
-  .policy-item {
-    border-radius: 5px;
-    background-color: var(--pink-bg);
-    padding: 20px 16px 8px;
-    position: relative;
-  }
-  .policy-number {
-    position: absolute;
-    top: -25px;
-    left: 23px;
-    font-family: "Inter", sans-serif;
-    font-weight: 800;
-    font-size: 100px;
-    line-height: 1.5;
-    opacity: 0.1;
-    color: var(--accent-cl);
-  }
-  .policy-item:not(:last-child) {
-    margin-bottom: 8px;
-  }
-  .policy-icon {
-    width: 125px;
-    height: 125px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 12px;
-  }
-  .policy-descr {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
-    color: var(--black-cl);
+  .secrets {
+    padding-top: 40px;
+    height: 929px;
+    background-image: url(../img/secrets/sections_bg.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
-  /* --------------------------- LINE ------------------------------ */
-
-  .line {
-    padding: 32px 0;
-    overflow: hidden;
+  .secrets-title {
+    margin-bottom: 30px;
   }
-
-  .line-wrap {
-    border-top: 4px solid var(--accent-cl);
-    padding: 24px 0;
-
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+  .secrets-list {
   }
-  .line-wrap:last-child {
-    border-bottom: 4px solid var(--accent-cl);
+  .secrets-item {
+    border-radius: 10px;
+    max-width: 314px;
   }
-  .line-list {
-    display: flex;
-    gap: 24px;
-
-    display: inline-flex;
-    position: absolute;
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 17s linear infinite;
-  }
-
-  .line-list.second {
-    animation: marquee 18s linear infinite;
-  }
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  .line-list span {
-    display: flex;
-    gap: 24px; /* Расстояние между повторениями */
-  }
-
-  .line-text {
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 0.9;
-    color: var(--txt-cl);
-  }
-
-  /* -------------------------- REVIEWS ----------------------------------- */
-
-  .reviews {
-    padding-top: 32px;
-    padding-bottom: 100px;
-    /* overflow: hidden; */
-  }
-  .container {
-  }
-  .reviews-title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 91%;
-    color: var(--txt-cl);
-    margin-bottom: 24px;
-    text-align: center;
-  }
-  .reviews-list {
-    display: flex;
-    gap: 12px;
-  }
-  .reviews-item {
-    border-radius: 5px;
-    width: 291px;
-    background-color: var(--pink-bg);
-    padding: 20px;
-  }
-  .reviews-stars {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 12px;
-  }
-  .reviews-icons {
-    display: flex;
-    gap: 4px;
-  }
-  .reviews-icon {
-  }
-  .reviews-date,
-  .reviews-name {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--txt-cl);
-  }
-  .reviews-text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--txt-cl);
-    margin-bottom: 24px;
-  }
-  .reviews-user {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  .secrets-item img {
   }
 
   /* ------------------------ REVIEWS SWIPER SLIDER ----------------- */
   .swiper {
-    width: 347px;
+    max-width: 314px;
     height: 260px;
   }
 
-  .swiper-wrapper {
-    height: 85%;
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--blue-background);
+    top: 80px;
   }
-  @media screen and (max-width: 369px) {
-    .swiper {
-      width: 290px;
-      height: 260px;
-    }
 
-    .swiper-wrapper {
-      height: 85%;
-    }
-  }
+  /* --------------------------- LINE ------------------------------ */
+
+  /* -------------------------- REVIEWS ----------------------------------- */
 
   /* ------------------------- FOOTER --------------------------- */
 

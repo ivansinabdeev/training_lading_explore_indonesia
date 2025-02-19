@@ -1,27 +1,24 @@
-let swiper = new Swiper(".swiper", {
-  // Responsive breakpoints
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-    },
-    // when window width is >= 640px
-    370: {
-      slidesPerView: 1.2,
-    },
-    768: {
-      slidesPerView: 2.6,
-    },
-    1240: {
-      slidesPerView: 4.2,
-    },
-  },
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
   autoplay: {
     delay: 4000,
   },
-  grabCursor: true,
+  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    clickable: true, // щоб жмакнути на кружочок
   },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: ".swiper-scrollbar",
+  // },
 });
