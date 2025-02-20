@@ -192,10 +192,15 @@ a {
 /* ------------------------ REVIEWS SWIPER SLIDER ----------------- */
 
 .swiper-pagination-bullet {
-  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  background-color: var(--text-lighten);
   border: 1px solid var(--main-red);
 }
 .swiper-pagination-bullet-active {
+  width: 43px;
+  height: 16px;
+  border-radius: 60px;
   background-color: var(--main-red);
 }
 
@@ -456,22 +461,35 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
   }
+  .secrets .container {
+    padding: 0 10px;
+  }
 
   .secrets-title {
     margin-bottom: 30px;
   }
   .secrets-list {
+    /* display: flex;
+    gap: 30px; */
   }
   .secrets-item {
     border-radius: 10px;
-    max-width: 314px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
   }
   .secrets-item img {
+    max-width: 240px;
+  }
+  @media screen and (min-width: 375px) {
+    .secrets-item img {
+      max-width: 314px;
+    }
   }
 
-  /* ------------------------ REVIEWS SWIPER SLIDER ----------------- */
+  /* ------------------------ SECRETS SWIPER SLIDER ----------------- */
   .swiper {
-    max-width: 314px;
+    width: 100%;
     height: 260px;
   }
 
@@ -479,6 +497,33 @@ a {
   .swiper-button-prev {
     color: var(--blue-background);
     top: 80px;
+  }
+  @media screen and (min-width: 375px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 100px;
+    }
+  }
+  .swiper-button-prev {
+    left: -8px;
+  }
+  .swiper-button-next {
+    right: -8px;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 70px;
+  }
+  @media screen and (min-width: 375px) {
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: 20px;
+    }
   }
 
   /* --------------------------- LINE ------------------------------ */
@@ -845,250 +890,66 @@ a {
     margin-bottom: 33px;
   }
 
-  /* -------------------------- POLICY ------------------------- */
+  /* -------------------------- SECRETS ------------------------- */
 
-  .policy {
-    padding: 44px 0;
+  .secrets {
+    padding-top: 40px;
+    height: 929px;
+    background-image: url(../img/secrets/sections_bg.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .policy-title {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 0.91;
-    color: var(--txt-cl);
-    text-align: center;
-    margin-bottom: 40px;
+  .secrets .container {
+    padding: 0 10px;
   }
-  .policy-list {
+
+  .secrets-title {
+    margin-bottom: 30px;
+  }
+
+  .secrets-item {
+    border-radius: 10px;
     display: flex;
-    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
   }
-  @media screen and (max-width: 1239px) {
-    .policy-list {
-      flex-wrap: wrap;
-    }
+  .secrets-item img {
+    max-width: 314px;
   }
-  .policy-item {
-    width: 354px;
-    border-radius: 5px;
-    background-color: var(--pink-bg);
-    padding: 24px 12px 20px;
-    position: relative;
+
+  /* ------------------------ SECRETS SWIPER SLIDER ----------------- */
+  .swiper {
+    width: 100%;
+    height: 260px;
   }
-  .policy-number {
-    position: absolute;
-    top: -25px;
-    left: 32px;
-    font-family: "Inter", sans-serif;
-    font-weight: 800;
-    font-size: 100px;
-    line-height: 1.5;
-    opacity: 0.1;
-    color: var(--accent-cl);
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--blue-background);
+    top: 100px;
   }
-  .policy-icon {
-    width: 116px;
-    height: 116px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 29px;
+  .swiper-button-prev {
+    left: -8px;
   }
-  .policy-descr {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
-    color: var(--black-cl);
+  .swiper-button-next {
+    right: -8px;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 20px;
   }
 
   /* --------------------------- LINE ------------------------------ */
 
-  .line {
-    padding: 44px 0;
-    overflow: hidden;
-  }
-  .line-wrap {
-    border-top: 4px solid var(--accent-cl);
-    padding: 24px 0;
-
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
-  .line-wrap:last-child {
-    border-bottom: 4px solid var(--accent-cl);
-  }
-  .line-list {
-    display: flex;
-    gap: 40px;
-
-    display: inline-flex;
-    position: absolute;
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 17s linear infinite;
-  }
-
-  .line-list.second {
-    animation: marquee 18s linear infinite;
-  }
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  .line-list span {
-    display: flex;
-    gap: 24px; /* Расстояние между повторениями */
-  }
-  .line-text {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 0.9;
-    color: var(--txt-cl);
-  }
-
   /* -------------------------- REVIEWS ----------------------------------- */
 
-  .reviews {
-    padding-top: 44px;
-    padding-bottom: 150px;
-    overflow: hidden;
-  }
-  /* .container {
-  } */
-  .reviews-title {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 0.9;
-    color: var(--txt-cl);
-    margin-bottom: 24px;
-    text-align: center;
-  }
-  .reviews-list {
-    display: flex;
-    gap: 20px;
-  }
-  .reviews-item {
-    border-radius: 5px;
-    width: 291px;
-    background-color: var(--pink-bg);
-    padding: 20px;
-  }
-  .reviews-stars {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 12px;
-  }
-  .reviews-icons {
-    display: flex;
-    gap: 4px;
-  }
-  .reviews-icon {
-  }
-  .reviews-date,
-  .reviews-name {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--txt-cl);
-  }
-  .reviews-text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--txt-cl);
-    margin-bottom: 24px;
-  }
-  .reviews-user {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  /* ------------------------ REVIEWS SWIPER SLIDER ----------------- */
-  .swiper {
-    width: 750px;
-    height: 260px;
-  }
-
-  .swiper-wrapper {
-    height: 85%;
-  }
-
   /* ------------------------- FOOTER --------------------------- */
-
-  .footer {
-    padding-top: 25px;
-    padding-bottom: 60px;
-    border-top: 1px solid var(--accent-cl);
-  }
-  .footer .container {
-    display: flex;
-    column-gap: 85px;
-    row-gap: 32px;
-  }
-  @media screen and (max-width: 1239px) {
-    .footer .container {
-      flex-wrap: wrap;
-    }
-  }
-  @media screen and (max-width: 1239px) {
-    .footer-info .footer-title,
-    .footer-products .footer-title,
-    .footer-docs .footer-title {
-      margin-bottom: 12px;
-    }
-  }
-  @media screen and (max-width: 1239px) {
-    .footer-docs {
-      max-width: 214px;
-    }
-  }
-  .footer-title {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--txt-cl);
-  }
-  .footer-item:not(:last-child) {
-    margin-bottom: 8px;
-  }
-  .footer-link {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--txt-cl);
-    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .footer-link:hover,
-  .footer-link:focus {
-    color: var(--accent-cl);
-  }
-  .footer-mob {
-    display: none;
-  }
-  @media screen and (max-width: 1239px) {
-    .footer-social {
-      display: flex;
-      align-items: center;
-    }
-  }
-  @media screen and (max-width: 1239px) {
-    .footer-social .footer-title {
-      margin-right: 16px;
-    }
-  }
-  .footer-social-list {
-    display: flex;
-    gap: 24px;
-  }
 }
 
 /* ==============================------------ DESKTOP ----------================================== */
@@ -1223,74 +1084,54 @@ a {
     letter-spacing: 0.01em;
     max-width: 407px;
   }
-  /* -------------------------- POLICY ------------------------- */
+  /* -------------------------- SECRETS ------------------------- */
 
-  .policy {
-    padding: 75px 0;
+  .secrets {
+    padding-top: 127px;
+    height: 1414px;
+    background-position-y: -415px;
   }
-  .policy-item {
-    width: 295px;
-    height: 295px;
-    padding: 70px 38px 34px;
+  .secrets .container {
+    max-width: 1320px;
+    position: relative;
   }
-  .policy-title {
-    font-size: 32px;
-    margin-bottom: 56px;
+
+  .secrets-title {
+    margin-bottom: 45px;
   }
-  .policy-number {
-    top: -26px;
-    left: 20px;
-    font-size: 128px;
+
+  .secrets-item img {
+    max-width: 405px;
   }
+
+  /* ------------------------ SECRETS SWIPER SLIDER ----------------- */
+  .swiper {
+    height: 305px;
+    position: unset;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 240px;
+  }
+  .swiper-button-prev {
+    left: -70px;
+  }
+  .swiper-button-next {
+    right: -70px;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 30px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0px;
+  }
+
   /* --------------------------- LINE ------------------------------ */
 
-  .line {
-    padding: 75px 0;
-  }
-  .line-wrap {
-    padding: 56px 0;
-  }
-  .line-list {
-    gap: 24px;
-  }
-
-  .line-text {
-    font-size: 64px;
-  }
   /* -------------------------- REVIEWS ----------------------------------- */
 
-  .reviews {
-    padding-top: 75px;
-    padding-bottom: 100px;
-  }
-
-  .reviews-title {
-    font-size: 32px;
-    margin-bottom: 48px;
-  }
-  /* ------------------------ REVIEWS SWIPER SLIDER ----------------- */
-  .swiper {
-    width: 1220px;
-    height: 260px;
-  }
-
-  .swiper-wrapper {
-    height: 85%;
-  }
   /* ------------------------- FOOTER --------------------------- */
-
-  .footer .container {
-    column-gap: 115px;
-  }
-  .footer-title {
-    margin-bottom: 12px;
-  }
-  .footer-social {
-    max-width: 221px;
-  }
-  .footer-social-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px 31px;
-  }
 }
